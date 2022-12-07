@@ -1,3 +1,4 @@
+<?php /* Objeto $search_args definido no contexto da função app_search_form() */ ?>
 <section class="search-form">
     <h2>Busca de Notícias</h2>
     <div class="tabs flex">
