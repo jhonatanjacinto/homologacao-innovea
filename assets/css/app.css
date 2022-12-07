@@ -1,0 +1,218 @@
+@import url("_normalize.css");
+
+*,
+::before,
+::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Maven Pro', sans-serif;
+    font-size: 16px;
+    color: #000;
+    margin: 0;
+    padding: 0;
+}
+
+a, 
+button {
+    text-decoration: none;
+    transition: .2s linear;
+    color: inherit;
+}
+
+a:hover {
+    color: #517495;
+}
+
+button {
+    cursor: pointer;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+/* Cabeçalho e Rodapé */
+.top {
+    align-items: center;
+    padding: 30px;
+    border-bottom: 1px solid #D9D9D9;
+}
+
+.top h1 {
+    border: 5px solid #000;
+    margin: 0;
+    padding: 9px 12px;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 900;
+}
+
+.top p {
+    margin: 0;
+    max-width: 295px;
+    width: 100%;
+    text-align: right;
+    font-size: 14px;
+}
+
+.bottom {
+    text-align: center;
+    font-size: 12px;
+    padding: 30px 0;
+}
+
+/* Form de Busca */
+.search-form,
+.search-results {
+    text-align: center;
+    padding: 40px 20px;
+    border-bottom: 1px solid #D9D9D9;
+}
+
+.search-form h2,
+.search-results h2 {
+    font-size: 16px;
+    text-transform: uppercase;
+    margin: 0 0 16px 0;
+}
+
+.search-form .tabs {
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.search-form .tabs button {
+    color: #626262;
+    font-size: 14px;
+    border: 1px solid #F1F1F1;
+    border-radius: 5px;
+    margin: 0 5px;
+    padding: 7px 15px;
+    background-color: #fff;
+}
+
+.search-form .tabs button:hover,
+.search-form .tabs button.active {
+    color: #fff;
+    background-color: #B1B1B1;
+}
+
+.search-form .btn {
+    background-color: #517495;
+    letter-spacing: 3px;
+    font-weight: 500;
+    text-transform: uppercase;
+    width: 100%;
+    color: #fff;
+    padding: 20px;
+    border: none;
+    border-radius: 5px;
+}
+
+.search-form .btn:hover {
+    background-color: #263b50;
+}
+
+.search-form .tab-contents {
+    max-width: 450px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.search-form .disclaim {
+    font-size: 12px;
+}
+
+.search-form label {
+    display: inline-block;
+    margin-bottom: 5px;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.search-form .field-group {
+    margin: 15px 0;
+    text-align: left;
+}
+
+.search-form .field-group .field-input {
+    border: 1px solid #C7C7C7;
+    padding: 10px 15px;
+    font-family: inherit;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.search-form .field-group.flex .field-input {
+    width: 49%;
+}
+
+.search-form .field-group .field-input.invalid-input {
+    color: #9c1111;
+    border-color: #9c1111;
+    background-color: #fccccc;
+}
+
+.search-form .content:not(.active) {
+    display: none;
+}
+
+/* Resultados da busca */
+.search-results .news-container {
+    align-content: center;
+}
+
+/* Card de Notícia */
+.news-card {
+    max-width: calc(32% - 15px);
+    border: 1px solid #D9D9D9;
+    border-radius: 5px;
+    padding: 15px;
+    text-align: left;
+    margin:0 15px 30px 15px;
+    flex-grow: 1;
+}
+
+.news-card span {
+    font-size: 12px;
+}
+
+.news-card h3 {
+    margin: 5px 0;
+}
+
+.news-card p {
+    text-align: justify;
+    margin-top: 30px;
+}
+
+@media (max-width: 1280px) {
+    .news-card {
+        max-width: calc(48% - 15px);
+    }
+}
+
+@media (max-width: 810px) {
+    .news-card {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 550px) {
+    .top {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .top p {
+        text-align: center;
+        width: 90%;
+        margin-top: 15px;
+    }
+}
